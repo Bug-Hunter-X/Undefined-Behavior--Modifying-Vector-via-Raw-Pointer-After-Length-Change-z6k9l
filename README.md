@@ -1,0 +1,3 @@
+# Rust Undefined Behavior Example
+
+This repository demonstrates a common source of undefined behavior in Rust: modifying a vector through a raw pointer after its length or capacity has been changed.  The code in `bug.rs` attempts to modify a vector's first element using a raw pointer obtained using `as_mut_ptr()`.  This is unsafe and can lead to crashes or data corruption.  The solution in `bugSolution.rs` shows a safer approach.
